@@ -2,8 +2,8 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import useInfo from '../hooks/useInfo'
-const ResidentInfo = ({resident}) => {
-    const informations = useInfo(resident)
+const ResidentInfo = ({url}) => {
+    const informations = useInfo(url)
 
     return (
         <div className='residentInfo row'>
@@ -16,7 +16,6 @@ const ResidentInfo = ({resident}) => {
                 <h5> <b>Origin: </b>{informations?.origin.name}</h5>
                 <h5> <b>episodes where appear: </b>{informations?.episode.length}</h5>
             </div>
-            
         </div>
     )
 }
